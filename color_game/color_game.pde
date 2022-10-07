@@ -42,6 +42,8 @@ int highscore;
 int randomNum;
 float moveY;
 
+
+
 //IMAGE
 PImage rainbow;
 
@@ -69,6 +71,8 @@ void setup() {
   highscore = 0;
   moveY = 0;
   selectedImage = rainbow;
+  
+
   
   //image 
   rainbow = loadImage("Rainbow.png");
@@ -107,8 +111,6 @@ void draw() {
     intro();
   } else if (mode == GAME) {
     game();
-  } else if (mode == PAUSE) {
-    pausescreen();
   } else if (mode == GAMEOVER) {
     gameover();
   } else {

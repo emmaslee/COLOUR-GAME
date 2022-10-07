@@ -1,12 +1,7 @@
 void intro() {
   
-  background(190, 228, 229);
-  image(gif[f], 0, 0, 800, 800);
-  println(frameCount);
-  //modulus of mod
-  if (frameCount % 2 == 0) f = f+ 1;
-  if (f == numberOfFrames) f = 0;
-
+  gif();
+  
 image(rainbow, 80, 150, 150, 150);
 image(rainbow, 580, 150, 150, 150);
 
@@ -41,4 +36,13 @@ void introClicks() {
   if (mouseX > 300 && mouseX < 500 && mouseY > 600 && mouseY < 700) {
     mode = GAME;
   }
+}
+
+void gif() {
+  background(190, 228, 229);
+  image(gif[f], 0, 0, 800, 800);
+  println(frameCount);
+  //modulus of mod
+  if (frameCount % 2 == 0) f = f+ 1;
+  if (f == numberOfFrames) f = 0;
 }

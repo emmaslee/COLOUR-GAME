@@ -1,11 +1,8 @@
 void gameover() {
   background(255, 0, 0);
   
-  image(gif[f], 0, 0, 800, 800);
-  println(frameCount);
-  //modulus of mod
-  if (frameCount % 2 == 0) f = f+ 1;
-  if (f == numberOfFrames) f = 0;
+  gif();
+  
 
   text("GAME OVER", 400, 400);
   

@@ -13,11 +13,6 @@ void game() {
     mode = GAMEOVER;
   }
 
-
-  //score
-
-
-
   //match
   fill(255);
   textSize(10);
@@ -40,14 +35,12 @@ void game() {
       randomColor = (int) random (0, 5);
       score ++;
       moveY = 0;
-      success.rewind();
-      success.play();
+      success();
       split();
     }
     if (guess == 2) {
       mode = GAMEOVER;
-      failure.rewind();
-      failure.play();
+      failure();
     }
     guess = 3;
   }
@@ -59,15 +52,13 @@ void game() {
       randomWord = (int) random (0, 5);
       randomColor = (int) random (0, 5);
       moveY = 0;
-      success.rewind();
-      success.play();
+      success();
       split();
     }
     if (guess == 1) {
       mode = GAMEOVER;
       moveY = 0;
-      failure.rewind();
-      failure.play();
+      failure();
     }
     guess = 3;
   }
@@ -93,4 +84,14 @@ void split () {
       //randomNum = (int) random(5, 10);
     }
   }
+}
+
+void success () {
+ success.rewind();
+ success.play(); 
+}
+
+void failure () {
+  failure.rewind();
+  failure.play();
 }

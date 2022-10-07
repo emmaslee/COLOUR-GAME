@@ -3,8 +3,6 @@ void mouseReleased() {
     introClicks();
   } else if (mode == GAME) {
     gameClicks();
-  } else if (mode == PAUSE) {
-    pausescreenClicks();
   } else if (mode == GAMEOVER) {
     gameoverClicks();
 }
